@@ -1,5 +1,3 @@
-Here’s a README.md file for your script:
-
 # Book Categorization Script
 
 This script categorizes books based on their descriptions by utilizing the OpenAI API. It takes a CSV file with book information, analyzes the descriptions, and outputs relevant categories based on a predefined list of categories.
@@ -33,8 +31,9 @@ This script categorizes books based on their descriptions by utilizing the OpenA
    - Create a .env file in the project root.
    - Add your OpenAI API key:
 
-   OPENAI_API_KEY=your_api_key_here
-   ```
+               
+         OPENAI_API_KEY=your_api_key_here
+               
 
 4. **Prepare category list**:
    - Create a text file containing book categories, each category on a new line.
@@ -44,15 +43,18 @@ This script categorizes books based on their descriptions by utilizing the OpenA
 
 Run the script with the following command:
 
+```bash
 python script_name.py <input_csv> <output_csv> <categories_file>
-
+```
 - `<input_csv>`: Path to the CSV file containing book data with columns id, title, description, and optionally ai_description.
 - `<output_csv>`: Path to the output CSV file for categorized data.
 - `<categories_file>`: Path to the text file containing a list of categories.
 
 Example
 
-python categorize_books.py books.csv categorized_books.csv categories.txt
+```bash
+python categorizer.py books.csv categorized_books.csv categories.txt
+```
 
 ## Script Overview
 
@@ -82,5 +84,3 @@ Logs are set to INFO level to monitor the script’s progress. This includes inf
 ## License
 
 This project is licensed under the MIT License.
-
-Note: Ensure your OpenAI API usage complies with OpenAI’s usage policies.
