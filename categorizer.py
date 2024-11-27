@@ -261,11 +261,13 @@ def process_single_book(row, categories, writer, output_file) -> None:
     """
     book_id = row["id"]
     title = row.get("title", "")
-    ai_description = row.get("ai_description", None)
+    # ai_description = row.get("ai_description", None)
     description = row.get("description", "")
+    tags = row.get("tags", "")
 
     logging.info("Processing book ID: %s", book_id)
-    combined_description = preprocess_description(ai_description, description, title)
+    # combined_description = preprocess_description(tags, description, title)
+    combined_description = f"{title}: {description} {tags}"
     if not combined_description:
         logging.warning("Skipping book ID %s due to lack of valid description.", book_id)
         return

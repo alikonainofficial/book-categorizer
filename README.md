@@ -20,40 +20,40 @@ This script categorizes books based on their descriptions by utilizing the OpenA
 
 ## Setup
 
-1. **Clone the repository** (if applicable) and navigate to the project folder.
-   
-2. **Install dependencies** by running:
-   ```bash
-   pip install -r requirements.txt
-   ```
+1.  **Clone the repository** (if applicable) and navigate to the project folder.
+2.  **Install dependencies** by running:
 
-3. **Set up OpenAI API key**:
-   - Create a .env file in the project root.
-   - Add your OpenAI API key:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-               
-         OPENAI_API_KEY=your_api_key_here
-               
+3.  **Set up OpenAI API key**:
 
-4. **Prepare category list**:
-   - Create a text file containing book categories, each category on a new line.
-   - Provide the path to this file when running the script.
+    - Create a .env file in the project root.
+    - Add your OpenAI API key:
+
+          OPENAI_API_KEY=your_api_key_here
+
+4.  **Prepare category list**:
+    - Create a text file containing book categories, each category on a new line.
+    - Provide the path to this file when running the script.
 
 ## Usage
 
 Run the script with the following command:
 
 ```bash
-python script_name.py <input_csv> <output_csv> <categories_file>
+python3 script_name.py <input_csv> <output_csv> <categories_file>
 ```
-- `<input_csv>`: Path to the CSV file containing book data with columns id, title, description, and optionally ai_description.
+
+- `<input_csv>`: Path to the CSV file containing book data with columns id, title, description, and optionally ai_description or tags.
 - `<output_csv>`: Path to the output CSV file for categorized data.
 - `<categories_file>`: Path to the text file containing a list of categories.
 
 Example
 
 ```bash
-python categorizer.py books.csv categorized_books.csv categories.txt
+python3 categorizer.py books.csv categorized_books.csv categories.txt
 ```
 
 ## Script Overview
